@@ -27,7 +27,6 @@ struct CharacterCellView: View {
         AsyncImage(url: URL(string: character.image)) { image in
             image.resizable()
                 .aspectRatio(contentMode: .fill)
-            
         } placeholder: {
             ProgressView()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
