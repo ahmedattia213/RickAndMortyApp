@@ -4,6 +4,31 @@
 
 RickAndMortyApp is an iOS application designed to fetch and display characters from the Rick and Morty API. The app leverages both UIKit and SwiftUI to demonstrate modern iOS development techniques within a Model-View-ViewModel (MVVM) architectural framework. This organization ensures that the application is maintainable, scalable, and reusable.
 
+## Instructions for Building and Running the Application
+
+1. **Clone the repository:**
+- `git clone https://github.com/yourgithub/rickandmortyapp.git`
+2. **Open the project in Xcode:**
+- Navigate to the directory where the project was cloned and open `RickAndMortyApp.xcodeproj`.
+3. **Change the target membership:**
+- In Xcode, go to the project settings, navigate to 'Signing & Capabilities', and change the team to your Apple Developer Account to sign the build.
+4. **Select a target device:**
+- Choose either a connected iOS device or a simulator from the top device toolbar in Xcode.
+5. **Run the application:**
+- Hit the `Run` button in Xcode or press `Cmd + R` to build and run the application.
+
+## Assumptions and Decisions
+
+- **API Usage:** Assumed that the Rick and Morty API is stable and returns data in a consistent format.
+- **Interface Design:** No segmented controls were used for filtering character status because the design specifications showed all three states as unselected, suggesting a possible 'cleared' state. Thus, buttons were used instead to allow for an explicit clear or deselect action.
+- **Error Handling:** Assumed network reliability issues might occur, thus implemented error handling to inform users of network or data retrieval issues.
+
+## Challenges and Solutions
+
+- **Pagination Logic:** Encountered challenges in managing state and data consistency during pagination. This was addressed by carefully managing the state within `CharacterViewModel` and ensuring new data loads are appended correctly.
+- **Combining UIKit and SwiftUI:** Integrating SwiftUI views within a UIKit-driven architecture posed initial challenges. Solved by using `UIHostingController` to bridge UIKit and SwiftUI components effectively.
+- **Testing Asynchronous Code:** Writing tests for asynchronous network calls was challenging. Overcame this by using expectations in XCTest and mocking network responses to ensure reliability and consistency in tests.
+
 ## Features
 
 - **Character Listing:** Displays a paginated list of characters, each showing details such as the character's name, image, and species.
