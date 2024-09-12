@@ -58,7 +58,6 @@ struct CharacterCellView: View {
         CharacterCellView(character: PreviewContent.dummyCharacter2)
         CharacterCellView(character: PreviewContent.dummyCharacter3)
     }
-    .scrollable()
     .backgroundZStack()
 }
 #endif

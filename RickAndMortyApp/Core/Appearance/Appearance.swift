@@ -5,6 +5,7 @@ final class Appearance {
     
     /// Call this method to set up the app's appearance
     static func setup() {
-        UIRefreshControl.appearance().tintColor = UIColor(Color.textPrimary)
+        // for instance
+        // UIRefreshControl.appearance().tintColor = UIColor(Color.textPrimary)
     }
 }

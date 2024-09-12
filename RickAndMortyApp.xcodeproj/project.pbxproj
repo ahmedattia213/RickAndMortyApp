@@ -24,7 +24,6 @@
 		E24D202A2C9095A40047467F /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24D20292C9095A40047467F /* Appearance.swift */; };
 		E24D202C2C9095AD0047467F /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24D202B2C9095AD0047467F /* Icons.swift */; };
 		E24D202E2C9095F40047467F /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24D202D2C9095F40047467F /* Padding.swift */; };
-		E24D20312C90960E0047467F /* View+Scrollable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24D20302C90960E0047467F /* View+Scrollable.swift */; };
 		E24D20332C90962B0047467F /* UINavigationController+PopGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24D20322C90962B0047467F /* UINavigationController+PopGesture.swift */; };
 		E24D20352C90963C0047467F /* Stacks+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24D20342C90963C0047467F /* Stacks+Helper.swift */; };
 		E24D20372C9096500047467F /* View+Clickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24D20362C9096500047467F /* View+Clickable.swift */; };
@@ -35,6 +34,7 @@
 		E24D20432C90A2100047467F /* CharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24D20422C90A2100047467F /* CharacterService.swift */; };
 		E24D20452C90A6D90047467F /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24D20442C90A6D90047467F /* CharacterViewModel.swift */; };
 		E2E0B8732C9336CF00E54CBF /* CharacterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E0B8722C9336CF00E54CBF /* CharacterViewModelTests.swift */; };
+		E2E0B87A2C934E0600E54CBF /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E0B8792C934E0600E54CBF /* Character.swift */; };
 		E2EDFFB32C91CF61004E1027 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EDFFB22C91CF61004E1027 /* HomeView.swift */; };
 		E2EDFFB52C91CF73004E1027 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EDFFB42C91CF73004E1027 /* DetailView.swift */; };
 		E2EDFFB72C91CF82004E1027 /* CharacterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EDFFB62C91CF82004E1027 /* CharacterCellView.swift */; };
@@ -72,7 +72,6 @@
 		E24D20292C9095A40047467F /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		E24D202B2C9095AD0047467F /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		E24D202D2C9095F40047467F /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
-		E24D20302C90960E0047467F /* View+Scrollable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Scrollable.swift"; sourceTree = "<group>"; };
 		E24D20322C90962B0047467F /* UINavigationController+PopGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+PopGesture.swift"; sourceTree = "<group>"; };
 		E24D20342C90963C0047467F /* Stacks+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stacks+Helper.swift"; sourceTree = "<group>"; };
 		E24D20362C9096500047467F /* View+Clickable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Clickable.swift"; sourceTree = "<group>"; };
@@ -84,6 +83,7 @@
 		E24D20442C90A6D90047467F /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
 		E2E0B8702C9336CF00E54CBF /* RickAndMortyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickAndMortyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E0B8722C9336CF00E54CBF /* CharacterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModelTests.swift; sourceTree = "<group>"; };
+		E2E0B8792C934E0600E54CBF /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		E2EDFFB22C91CF61004E1027 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E2EDFFB42C91CF73004E1027 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		E2EDFFB62C91CF82004E1027 /* CharacterCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCellView.swift; sourceTree = "<group>"; };
@@ -162,6 +162,7 @@
 		E24D200E2C9094A80047467F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E2E0B87B2C934E1700E54CBF /* Models */,
 				E24D20382C90965C0047467F /* View Modifier */,
 				E24D202F2C9096040047467F /* UI+Helper */,
 				E24D20262C90958E0047467F /* Appearance */,
@@ -218,7 +219,6 @@
 		E24D202F2C9096040047467F /* UI+Helper */ = {
 			isa = PBXGroup;
 			children = (
-				E24D20302C90960E0047467F /* View+Scrollable.swift */,
 				E24D20322C90962B0047467F /* UINavigationController+PopGesture.swift */,
 				E24D20342C90963C0047467F /* Stacks+Helper.swift */,
 				E2EDFFBC2C91DDF9004E1027 /* View+Border.swift */,
@@ -286,6 +286,14 @@
 				E2E0B8722C9336CF00E54CBF /* CharacterViewModelTests.swift */,
 			);
 			path = RickAndMortyAppTests;
+			sourceTree = "<group>";
+		};
+		E2E0B87B2C934E1700E54CBF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E2E0B8792C934E0600E54CBF /* Character.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,7 +408,6 @@
 				E24D20282C9095980047467F /* Spacing.swift in Sources */,
 				E24D20132C9094E40047467F /* DIContainer.swift in Sources */,
 				E24D20332C90962B0047467F /* UINavigationController+PopGesture.swift in Sources */,
-				E24D20312C90960E0047467F /* View+Scrollable.swift in Sources */,
 				E24D20152C9094EE0047467F /* AppDestination.swift in Sources */,
 				E24D201B2C9095140047467F /* AppRouter.swift in Sources */,
 				E2EDFFB32C91CF61004E1027 /* HomeView.swift in Sources */,
@@ -417,6 +424,7 @@
 				E24D201D2C9095260047467F /* AppCoordinatorsFactory.swift in Sources */,
 				E24D203C2C90975D0047467F /* AppViewModelsFactory.swift in Sources */,
 				E2EDFFB72C91CF82004E1027 /* CharacterCellView.swift in Sources */,
+				E2E0B87A2C934E0600E54CBF /* Character.swift in Sources */,
 				E2EDFFBD2C91DDF9004E1027 /* View+Border.swift in Sources */,
 				E24D203E2C90978D0047467F /* AppEntryView.swift in Sources */,
 			);
