@@ -12,6 +12,9 @@ struct HomeView: View {
             ButtonSelectionView(viewModel: viewModel)
             HomeViewHelper(viewModel: viewModel, coordinator: coordinator)
         }
+        .task {
+            await viewModel.fetchCharacters()
+        }
         .horizontalPadding()
     }
     
