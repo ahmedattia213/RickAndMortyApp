@@ -4,6 +4,12 @@
 
 RickAndMortyApp is an iOS application designed to fetch and display characters from the Rick and Morty API. The app leverages both UIKit and SwiftUI to demonstrate modern iOS development techniques within a Model-View-ViewModel (MVVM) architectural framework. This organization ensures that the application is maintainable, scalable, and reusable.
 
+## Features
+
+- **Character Listing:** Displays a paginated list of characters, each showing details such as the character's name, image, and species.
+- **Filtering Functionality:** Allows users to filter characters by their status (alive, dead, unknown).
+- **Character Details:** Provides detailed information about a selected character, including name, image, species, status, and gender.
+
 ## Instructions for Building and Running the Application
 
 1. **Clone the repository:**
@@ -28,12 +34,6 @@ RickAndMortyApp is an iOS application designed to fetch and display characters f
 - **Pagination Logic:** Encountered challenges in managing state and data consistency during pagination. This was addressed by carefully managing the state within `CharacterViewModel` and ensuring new data loads are appended correctly.
 - **Combining UIKit and SwiftUI:** Integrating SwiftUI views within a UIKit-driven architecture posed initial challenges. Solved by using `UIHostingController` to bridge UIKit and SwiftUI components effectively.
 - **Testing Asynchronous Code:** Writing tests for asynchronous network calls was challenging. Overcame this by using expectations in XCTest and mocking network responses to ensure reliability and consistency in tests.
-
-## Features
-
-- **Character Listing:** Displays a paginated list of characters, each showing details such as the character's name, image, and species.
-- **Filtering Functionality:** Allows users to filter characters by their status (alive, dead, unknown).
-- **Character Details:** Provides detailed information about a selected character, including name, image, species, status, and gender.
 
 ## Project Structure
 
