@@ -5,6 +5,10 @@ struct DetailView: View {
     let character: Character
     @ObservedObject var coordinator: MainCoordinator
     
+    private let backButtonSize: CGFloat = 50.0
+    private let imageCornerRadius: CGFloat = 30.0
+    private let imageHeight: CGFloat = 400
+    
     var body: some View {
         VStack(alignment: .leading) {
             ZStack(alignment: .top) {
@@ -31,7 +35,7 @@ struct DetailView: View {
             HapticButton(action: { coordinator.pop() }) {
                 Icons.back.size(.medium, color: .textPrimary)
             }
-            .frame(width: 50, height: 50)
+            .frame(width: backButtonSize, height: backButtonSize)
             .background(Color.backgroundPrimary)
             .clipShape(Circle())
             .padding(.top, spacing: .padding10)
@@ -47,7 +51,7 @@ struct DetailView: View {
                 case .success(let image):
                     image.resizable()
                         .aspectRatio(contentMode: .fill)
-                        .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                        .clipShape(RoundedRectangle(cornerRadius: imageCornerRadius, style: .continuous))
                 case .failure:
                     Image(systemName: "photo")
                         .foregroundColor(.secondary)
@@ -57,8 +61,8 @@ struct DetailView: View {
                     fatalError("Couldn't load image")
                 }
             }
-            .frame(maxWidth: .infinity, maxHeight: 400)
-            .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+            .frame(maxWidth: .infinity, maxHeight: imageHeight)
+            .clipShape(RoundedRectangle(cornerRadius: imageCornerRadius, style: .continuous))
         }
     }
 
